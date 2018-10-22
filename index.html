@@ -2,46 +2,112 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="ClipDrone - Images aériennes par drone - Société basée dans le Val d'Oise qui propose des prestations professionnelles dans le domaine de la captation d'images aériennes par drone (images et vidéos) sur l'ensemble du territoire français."/>
+		<meta name="author" content="Maxime Vivas - Vivastudio"/>
+		<link rel="icon" href="img/favicon.png"/>
+
+		<title>ClipDrone - Drone - Photographie et vidéo par drone dans le Val d'Oise et l'Ile de France</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.css" rel="stylesheet"/>
+		<link href="css/bootstrap-theme.css" rel="stylesheet"/>
+		<link href="css/clipdrone.css" rel="stylesheet"/>
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<script src="js/ie-emulation-modes-warning.js"></script>
+
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Vue POC</title>
+
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-		<script src="jquery-3.3.1.min.js"></script>
 
 	</head>
 
 	<body>
-		<div id="app">
-		  <div v-for="realisation in realisations">
-		  	Title: {{realisation.name}} <br/>
-		  	Miniature: img/{{realisation.miniature}} <br/>
-		  	Description: {{realisation.description}} <br/>
-		  	Vidéo: {{realisation.video}} <br/>
-		  </div>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Afficher le menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/accueil" style="font-size:25pt; padding-top: 15px; font-weight: bold;"><!--<img src="img/logo.png" height="55px"> --> <span style="color:#00ABFF;">Clip</span><span style=" font-weight: normal;">Drone</span></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right" id="topMenu">
+						<li id="homeMenu"><a href="accueil#myCarousel" data-target="myCarousel" class="menuLink">Accueil</a></li>
+						<li class="dropdown" id="prestationsMenu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prestations <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="accueil#evenementiel" data-target="evenementiel" class="menuLink">Événementiel</a></li>
+								<li><a href="accueil#patrimoine" data-target="patrimoine" class="menuLink">Patrimoine</a></li>
+								<li><a href="accueil#vuetechnique" data-target="vuetechnique" class="menuLink">Visite technique</a></li>
+								<li><a href="accueil#formation" data-target="formation" class="menuLink">Formation</a></li>
+							</ul>
+						</li>
+						<li id="realisationsMenu" class="active"><a href="realisations">Réalisations</a></li>
+						<li id="contactMenu"><a href="contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+
+
+		<div id="technicalview" style="margin-top:70px; border-top: 10px solid #00C3FE;">
+			<div class="container">
+				<h1>Découvrez nos réalisations</h1>
+
+				<ul class="nav nav-pills" id="filters">
+					<li class="active" data-filter="all"><a href="#">Tous</a></li>
+					<li data-filter="photo"><a>Photo</a></li>
+					<li data-filter="video"><a>Vidéos</a></li>
+					<li data-filter="event"><a>Evenementiel</a></li>
+					<li data-filter="patrimoine"><a>Patrimoine</a></li>
+					<li data-filter="technic"><a>Vue technique</a></li>
+				</ul>
+
+				<br/>
+
+				<div class="row" id="app">
+					<div v-for="realisation in realisations" class="col-md-3 card" data-tag="video patrimoine technic event">
+						<div>
+							<a :href="realisation.link"><img :src="realisation.miniature" :alt="realisation.name" width="100%"></a>
+							<a :href="realisation.link"><h5>{{realisation.name}}</h5></a>
+							<span class="label label-primary mrg-r-5" v-for="cat in realisation.category">{{cat}}</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
+
 	</body>
 
 	<script>
 
 		var app = new Vue({
-							el: '#app',
-							data () {
-								return {
-									realisations : null
-								}
-							},
-							created: function () {
-								console.log("created!");
-							},
-							mounted () {
-								var self = this;
-								axios
-								  .get('json/realisations.json')
-								  .then(function (response) {
-								  	self.realisations = response.data;
-								  });
-							}
-						})
+			el: '#app',
+			data () {
+				return {
+					realisations : null
+				}
+			},
+			created: function () {
+			},
+			mounted () {
+				var self = this;
+				axios
+				  .get('json/realisations.json')
+				  .then(function (response) {
+					self.realisations = response.data;
+				  });
+			}
+		})
 	</script>
 </html>

@@ -1,37 +1,106 @@
 [
 	{
-	  "name" : "Drone de Clip",
-	  "category" : ["video", "patrimoine"],
-	  "miniature" : "drone-de-clip.jpg",
-	  "video" : "WXTHG24-xxg",
-	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE."
+      "name" : "Drone de Clip",
+	  "category" : ["video"],
+	  "miniature" : "img/drone-de-clip.jpg",
+	  "video" : "https://youtu.be/WXTHG24-xxg",
+	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE.",
+      "link" : "drone-de-clip"
 	},
 	{
-	  "name" : "Drone de Clip",
+	  "name" : "Gite à Cabourg",
 	  "category" : ["video", "patrimoine"],
-	  "miniature" : "drone-de-clip.jpg",
-	  "video" : "WXTHG24-xxg",
-	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE."
+	  "miniature" : "img/cabourg.jpg",
+	  "video" : "https://youtu.be/fD9efT50vXI",
+	  "description" : "L'équipe de ClipDrone a réalisé des prises de vue aériennes pour un splendide gîte situé à Cabourg. Une vue technique pour des photos possibles que par la présence d'un drone.",
+      "link" : "cabourg"
 	},
 	{
-	  "name" : "Drone de Clip",
+	  "name" : "Chapelle Notre-Dame de la Côte",
 	  "category" : ["video", "patrimoine"],
-	  "miniature" : "drone-de-clip.jpg",
-	  "video" : "WXTHG24-xxg",
-	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE."
+	  "miniature" : "img/chapelle-penvins.jpg",
+	  "video" : "https://youtu.be/0RgWvyz_9eo",
+	  "description" : "L'équipe de ClipDrone a réalisé des prises de vue aériennes de la Chapelle Notre-Dame de la Côte de Penvins. Une vue technique pour des photos possibles que par la présence d'un drone.",
+      "link" : "chapelle-penvins"
 	},
 	{
-	  "name" : "Drone de Clip",
+	  "name" : "Chateau des Gaudras",
 	  "category" : ["video", "patrimoine"],
-	  "miniature" : "drone-de-clip.jpg",
-	  "video" : "WXTHG24-xxg",
-	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE."
+	  "miniature" : "img/domaine-gaudras.jpg",
+	  "video" : "https://youtu.be/OQ5gj-FkCo8",
+	  "description" : "Clip Drone a déployé ses moyens techniques et artistiques pour valoriser ce superbe domaine... Le clip respecte la sérénité et l'authenticité du lieu : accompagnement musical sobre, stabilité des prises de vue, rythme mesuré... Un résultat tout à fait \"dans l'esprit\" !",
+      "link" : "domaine-gaudras"
 	},
 	{
-	  "name" : "Drone de Clip",
+	  "name" : "Château de Suscinio",
 	  "category" : ["video", "patrimoine"],
-	  "miniature" : "drone-de-clip.jpg",
-	  "video" : "WXTHG24-xxg",
-	  "description" : "Un premier patchwork d'images aériennes captées par CLIP DRONE."
+	  "miniature" : "img/chateau-suscinio.jpg",
+	  "video" : "https://youtu.be/HF0KnPW6PBg",
+	  "description" : "Un très beau clip aux alentours du Château de Suscinio. Notre drône survole des champs pour se rapprocher du château pour de très belles images.",
+      "link" : "chateau-suscinio"
+	},
+	{
+      "name" : "Le rocher",
+      "category" : ["video", "patrimoine"],
+      "miniature" : "img/treompan-rocher.jpg",
+      "video" : "https://youtu.be/28oW7cWmx2c",
+      "description" : "Une mise en relief particulière d'un petit coin de littoral breton, version Finistère, avec sa côte sauvage et ses plages de sable blanc, ses dunes verdoyantes et ses rochers parfois si spectaculaires.",
+      "link" : "le-rocher"
+	},
+	{
+      "name" : "Salon du Mariage au Mont-Vernon",
+      "category" : ["video", "patrimoine", "evenementiel"],
+      "miniature" : "img/salon-du-mariage-mont-vernon.jpg",
+      "video" : "https://youtu.be/U3jK1Uh-3UM",
+      "description" : "Une simple présentation des alentours du salon du mariage au Mont-Vernon.",
+      "link" : "salon-mariage-mont-vernon"
+	},
+	{
+		"name" : "Mont Vernon",
+		"category" : ["video", "patrimoine"],
+		"miniature" : "img/mont-vernon.jpg",
+		"video" : "https://youtu.be/cQQ2rwa8qNU",
+		"description" : "Un aperçu de ce que peut produire CLIP DRONE pour valoriser un site : de la captation d'images à la réalisation du clip vidéo sonorisé.",
+      "link" : "mont-vernon"
+	},
+	{
+		"name" : "Flashmob de Justine et Benoit",
+		"category" : ["video", "evenementiel"],
+		"miniature" : "img/flashmob.jpg",
+		"video" : "https://youtu.be/mnjFdLgJL4k",
+		"description" : "Flashmob sur \"We found love\" de Rihanna... Une très belle surprise et une grosse participation ! Génial...",
+      "link" : "flashmob-justine-benoit"
+	},
+	{
+		"name" : "Luisant",
+		"category" : ["video"],
+		"miniature" : "img/luisant.jpg",
+		"video" : "https://youtu.be/tvcFzElt-XY",
+		"description" : "Un clip vidéo réalisé par CLIP DRONE à l'occasion de la rencontre de modélisme naval de Luisant près de Chartres le 18 juin 2017. Un beau dimanche au bord de l'eau et de magnifiques bateaux...",
+      "link" : "luisant"
+	},
+	{
+		"name" : "Lac de Remoray",
+		"category" : ["video"],
+		"miniature" : "img/remoray.jpg",
+		"video" : "https://youtu.be/wrhd-sTaPb0",
+		"description" : "Un petit aperçu du clip réalisé sur le lac de Remoray dans le Haut-Doubs. 1mn30 qui reflètent la tonalité du lieu : calme et sérénité. Juste trop beau au printemps...",
+      "link" : "lac-remoray"
+	},
+	{
+		"name" : "Pencadénic",
+		"category" : ["video"],
+		"miniature" : "img/pencadenic.jpg",
+		"video" : "https://youtu.be/gX10ac5AfZA",
+		"description" : "Une première vision aérienne et inédite de Pencadénic dans le Morbihan. Les marais, le bras de mer, les ostréiculteurs... un très beau paysage qui respire l'authenticité... Bientôt la suite...",
+      "link" : "pencadenic"
+	},
+	{
+		"name" : "Roseraie Paul Croix à Bourg-Argental - Loire - Rhône Alpes",
+		"category" : ["video", "patrimoine"],
+		"miniature" : "img/roseraie-paul-croix.jpg",
+		"video" : "https://youtu.be/UO--TBb6P3c",
+		"description" : "Magnifique immersion en juin 2018 au sein de la propriété de Madame Croix et plus précisément au-dessus de sa vénérable roseraie. <br/>Malgré le printemps tardif de la montagne ardéchoise, l'équipe de Clipdrone a pu capter les superbes massifs de roses encore quelque peu timides à dévoiler leur beauté et leur parfum. Un havre de paix bichonné par un couple de passionnés très attachants que Clipdrone vous conseille vivement de visiter...",
+      "link" : "roseraie-paul-croix"
 	}
 ]
