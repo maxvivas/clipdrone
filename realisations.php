@@ -25,57 +25,30 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+		<script src="js/jquery-3.3.1.min.js"></script>
+
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Afficher le menu</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/accueil" style="font-size:25pt; padding-top: 15px; font-weight: bold;"><!--<img src="img/logo.png" height="55px"> --> <span style="color:#00ABFF;">Clip</span><span style=" font-weight: normal;">Drone</span></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right" id="topMenu">
-						<li id="homeMenu"><a href="accueil#myCarousel" data-target="myCarousel" class="menuLink">Accueil</a></li>
-						<li class="dropdown" id="prestationsMenu">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prestations <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="accueil#evenementiel" data-target="evenementiel" class="menuLink">Événementiel</a></li>
-								<li><a href="accueil#patrimoine" data-target="patrimoine" class="menuLink">Patrimoine</a></li>
-								<li><a href="accueil#vuetechnique" data-target="vuetechnique" class="menuLink">Visite technique</a></li>
-								<li><a href="accueil#formation" data-target="formation" class="menuLink">Formation</a></li>
-							</ul>
-						</li>
-						<li id="realisationsMenu" class="active"><a href="realisations">Réalisations</a></li>
-						<li id="contactMenu"><a href="contact">Contact</a></li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</nav>
-
+        <?php include('navbar.php'); ?>
 
 		<div id="technicalview" style="margin-top:70px; border-top: 10px solid #00C3FE;">
-			<div class="container">
+			<div class="container" id="portfolio">
 				<h1>Découvrez nos réalisations</h1>
 
 				<ul class="nav nav-pills" id="filters">
 					<li class="active" data-filter="all"><a href="#">Tous</a></li>
-					<li data-filter="photo"><a>Photo</a></li>
-					<li data-filter="video"><a>Vidéos</a></li>
-					<li data-filter="event"><a>Evenementiel</a></li>
-					<li data-filter="patrimoine"><a>Patrimoine</a></li>
-					<li data-filter="technic"><a>Vue technique</a></li>
+					<li v-on:click="filter('photo')" ><a href="#">Photo</a></li>
+					<li v-on:click="filter('video')" ><a href="#">Vidéos</a></li>
+					<li v-on:click="filter('evenementiel')" ><a href="#">Evenementiel</a></li>
+					<li v-on:click="filter('patrimoine')" ><a href="#">Patrimoine</a></li>
+					<li v-on:click="filter('technic')" ><a href="#">Vue technique</a></li>
 				</ul>
 
 				<br/>
 
-				<div class="row" id="app">
-					<div v-for="realisation in realisations" class="col-md-3 card" data-tag="video patrimoine technic event">
+				<div class="row" >
+					<div v-for="realisation in realisations" class="col-md-3 card zoom" :class="{'card-show': realisation.show, 'card-hidden': realisation.hidden }">
 						<div>
 							<a :href="realisation.link"><img :src="realisation.miniature" :alt="realisation.name" width="100%"></a>
 							<a :href="realisation.link"><h5>{{realisation.name}}</h5></a>
@@ -87,27 +60,49 @@
 			</div>
 		</div>
 
-	</body>
+   <?php include('footer.php'); ?>
 
 	<script>
 
 		var app = new Vue({
-			el: '#app',
+			el: '#portfolio',
 			data () {
 				return {
-					realisations : null
+					realisations : []
 				}
 			},
 			created: function () {
 			},
 			mounted () {
 				var self = this;
+				self.realisations = [];
 				axios
 				  .get('json/realisations.json')
 				  .then(function (response) {
-					self.realisations = response.data;
+				  	response.data.forEach(realisation => {
+						realisation.hidden = false;
+						self.realisations.push(realisation);
+					})
 				  });
+			},
+			methods: {
+				filter: function(filter) {
+					$.each(this.realisations, function (index, realisation) {
+
+						setTimeout(function() {
+							if (realisation.category.indexOf(filter) > -1) {
+								realisation.hidden = false;
+								realisation.show = true;
+							} else {
+								realisation.hidden = true;
+								realisation.show = false;
+							}
+						}, index*50);
+					});
+				}
 			}
 		})
 	</script>
+
+	</body>
 </html>

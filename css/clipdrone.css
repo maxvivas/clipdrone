@@ -1,3 +1,27 @@
 .mrg-r-5 {
     margin-right: 5px;
 }
+
+.card-show {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.card-hidden {
+    opacity: 0.33;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.zoom div img {
+    margin-bottom: 10px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
+.zoom div:hover img {
+	-webkit-transform: scale(1.13);
+	transform: scale(1.13);
+}
