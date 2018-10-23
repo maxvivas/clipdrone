@@ -56,7 +56,7 @@
 
   <div id="footer" class="footer row">
     <div class="col-md-6 col-md-offset-3 col-xs-12 center">
-      ClipDrone <small>&copy; 2016</small>
+      ClipDrone <small>&copy; 2018</small>
       &nbsp;&nbsp;<span style="color:#b1b1b1">|</span>&nbsp;&nbsp;
       Site web créé par Maxime Vivas
       &nbsp;&nbsp;<span style="color:#b1b1b1">|</span>&nbsp;&nbsp;
@@ -127,7 +127,6 @@
           target = "navbar";
         }
 
-
         $(".menuLink").click(function(evt) {
             if (target == "myCarousel" || target == "evenementiel" || target == "vuetechnique" || target == "patrimoine" || target == "formation") {
               //on est deja sur la page d'accueil donc on empeche le chargement de la page
@@ -148,9 +147,6 @@
             }
             
         });
-
-
-        
 
         $('html, body').animate({
               scrollTop: $("#"+target).offset().top - 50

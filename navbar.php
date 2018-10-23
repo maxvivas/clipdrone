@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/accueil" style="font-size:25pt; padding-top: 15px; font-weight: bold;"><!--<img src="img/logo.png" height="55px"> --> <span style="color:#00ABFF;">Clip</span><span style=" font-weight: normal;">Drone</span></a>
+      <a class="navbar-brand" href="/accueil" style="font-size:25pt; padding-top: 20px; font-weight: bold;"><!--<img src="img/logo.png" height="55px"> --> <span style="color:#00ABFF;">Clip</span><span style=" font-weight: normal;">Drone</span></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right" id="topMenu">

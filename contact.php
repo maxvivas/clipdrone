@@ -27,10 +27,8 @@
   <body>
    <?php include('navbar.php'); ?>
 
-  <div id="mapArea" style="height:400px; border-bottom: 10px solid #00C3FE;">
-    <div style="padding-top: 150px; text-align: center; width: 100%; font-size: 20pt;">
-    Veuillez patienter pendant le chargement de la carte...
-    </div>
+  <div id="mapArea" style="height:400px; border-bottom: 10px solid #00C3FE; background-image: url('img/contact.jpeg');background-size: 100%;background-position: center">
+
   </div>
 
   <div id="patrimoine" class="marketting-area" style="background: white;">
@@ -97,41 +95,6 @@
   </div>
 
   <?php include('footer.php'); ?>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script type="text/javascript">
-      var map;
-      var initialize;
-
-      initialize = function(){
-        var latLng = new google.maps.LatLng(48.999517, 2.230241); // Correspond au coordonnées de Lille
-        var myOptions = {
-        zoom      : 11,
-        center    : latLng,
-        mapTypeId : google.maps.MapTypeId.ROADMAP, // Type de carte, différentes valeurs possible HYBRID, ROADMAP, SATELLITE, TERRAIN
-        maxZoom   : 20
-        };
-
-        map = new google.maps.Map(document.getElementById('mapArea'), myOptions);
-
-        var marker = new google.maps.Marker({
-        position : latLng,
-        map      : map,
-        title    : "ClipDrone"
-        });
-
-        var contentMarker = "<b>ClipDrone</b> <br> 1 Allée Ravel, 95130 Le Plessis-Bouchard";
-
-        var infoWindow = new google.maps.InfoWindow({
-          content  : contentMarker,
-          position : latLng
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          infoWindow.open(map,marker);
-        });
-      };
-
-      initialize();
-    </script>
 
 </body>
 </html>
