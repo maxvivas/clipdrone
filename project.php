@@ -34,7 +34,7 @@
   <body>
     <?php include('navbar.php'); ?>
 
-    <div id="technicalview" style="margin-top:70px; border-top: 10px solid #00C3FE;">
+    <div id="technicalview" style="margin-top:70px; border-top: 10px solid #00C3FE; display: none;">
       <div class="container">
         <h1 class="page-header">{{realisation.name}}</h1>
 
@@ -62,7 +62,6 @@
 
 
    <script type="text/javascript">
-
         var app = new Vue({
         			el: '#technicalview',
         			data () {
@@ -71,7 +70,7 @@
         				}
         			},
         			created: function () {
-
+                        $("#technicalview").show();
         			},
         			mounted () {
         				var self = this;
