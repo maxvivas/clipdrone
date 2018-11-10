@@ -99,8 +99,16 @@
 		"name" : "Roseraie Paul Croix",
 		"category" : ["video", "patrimoine"],
 		"miniature" : "img/roseraie-paul-croix.jpg",
-		"video" : "https://youtube.com/embed/UO--TBb6P3c",
+		"video" : "https://www.youtube.com/embed/7cqn6DU1sHo",
 		"description" : "Magnifique immersion en juin 2018 au sein de la propriété de Madame Croix et plus précisément au-dessus de sa vénérable roseraie. <br/>Malgré le printemps tardif de la montagne ardéchoise, l'équipe de Clipdrone a pu capter les superbes massifs de roses encore quelque peu timides à dévoiler leur beauté et leur parfum. Un havre de paix bichonné par un couple de passionnés très attachants que Clipdrone vous conseille vivement de visiter, le site est situé  à Bourg-Argental...",
       "link" : "roseraie-paul-croix"
+	},
+	{
+		"name" : "De Portsall à Landunvez...",
+		"category" : ["video", "patrimoine"],
+		"miniature" : "img/portsall-lanudvez.jpg",
+		"video" : "https://www.youtube.com/embed/Qf0xWkKvXoI",
+		"description" : "La mer en lettre majuscule sur cette très belle route touristique de Portsall à Landunvez dans le Finistère nord...",
+		"link" : "portsall-landuvez"
 	}
 ]
