@@ -40,6 +40,7 @@
 			<a href="/docs/Attestation-du-depot-de-MAPGirard.pdf" class="list-group-item">Attestation dépôt MAP</a>
 			<a href="/docs/Autorisation-préfecture-Val-d-Oise.pdf" class="list-group-item">Attestation préfecture du Val d'Oise</a>
 			<a href="/docs/Certificat-d-aptitude-évaluation-théorique.jpg" class="list-group-item">Certificat d'aptitude</a>
+			<a href="/docs/Declaration-activite-DGAC.pdf" class="list-group-item">Déclaration d'activité DGAC</a>
       		<a href="/mentions-legales" class="list-group-item">Mentions légales</a>
 
 		</div>
